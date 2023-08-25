@@ -1,2 +1,2 @@
-# AspNetCore-Localization-Samples
-Samples about Localization in ASP.NET Core
+# Localization in ASP.NET Core
+Samples about Localization in ASP.NET Core.
