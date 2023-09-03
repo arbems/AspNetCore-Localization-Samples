@@ -33,10 +33,9 @@ builder.Services.Configure<RequestLocalizationOptions>(options => {
                 //new RouteDataRequestCultureProvider(),
                 /*new CustomRequestCultureProvider(async context =>
                 {
-                    // Aquí debes implementar tu lógica para determinar la cultura basada en el contexto de la solicitud.
-                    // Puedes leer cookies, cabeceras, etc. para decidir la cultura.
+                    //Here logic to determine the culture
 
-                    // En este ejemplo, se simula que se obtiene la cultura "en-US" como predeterminada.
+                    //This example simulates getting the culture "es-ES" as the default.
                     string culture = "es-ES";
 
                     return new ProviderCultureResult(culture);
