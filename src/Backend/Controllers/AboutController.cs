@@ -19,5 +19,12 @@ namespace Backend.Controllers
         {
             return _localizer["About Title"];
         }
+
+        [HttpGet("GetResource")]
+        public IActionResult GetResource()
+        {
+            //error 404 not found
+            return NotFound(_localizer["Resource not found"].Value);
+        }
     }
 }

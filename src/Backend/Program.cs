@@ -1,3 +1,4 @@
+using Backend;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 
@@ -5,7 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddDataAnnotationsLocalization(options => {
+        options.DataAnnotationLocalizerProvider = (type, factory) =>
+            factory.Create(typeof(SharedResource));
+    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,11 +27,11 @@ builder.Services.Configure<RequestLocalizationOptions>(options => {
             .AddSupportedUICultures(SupportedCultures)
             .RequestCultureProviders = new List<IRequestCultureProvider>
             {
-                //new AcceptLanguageHeaderRequestCultureProvider(),
+                new AcceptLanguageHeaderRequestCultureProvider(),
                 //new QueryStringRequestCultureProvider(),
                 //new CookieRequestCultureProvider(),
                 //new RouteDataRequestCultureProvider(),
-                new CustomRequestCultureProvider(async context =>
+                /*new CustomRequestCultureProvider(async context =>
                 {
                     // Aquí debes implementar tu lógica para determinar la cultura basada en el contexto de la solicitud.
                     // Puedes leer cookies, cabeceras, etc. para decidir la cultura.
@@ -34,7 +40,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options => {
                     string culture = "es-ES";
 
                     return new ProviderCultureResult(culture);
-                })
+                })*/
             };
 });
 

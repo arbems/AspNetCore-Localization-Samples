@@ -120,4 +120,7 @@
   <data name="About Title" xml:space="preserve">
     <value>About us</value>
   </data>
+  <data name="Resource not found" xml:space="preserve">
+    <value>Resource not found</value>
+  </data>
 </root>
