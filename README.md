@@ -9,4 +9,4 @@ In this repository you will find updated samples about Localization in ASP.NET C
 The main branch is now on .NET 7.0.
 
 ## Learn more
-[Creating multilingual Web APIs in ASP.NET Core](https://arbems.com/en/multilingual-web-apis-in-asp-net-core/)
+[Creating multilingual Web APIs in ASP.NET Core](https://arbems.com/en/multilingual-web-apis-in-asp-net-core/){:target="_blank"}
